@@ -1,0 +1,47 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$rmplem9LM4Gi$bbMEvQygKE/N8P/uDL7rZXIAT2oN+t+pqjHCUl5NYnI=",
+      "last_login": "2020-12-19T21:55:59.613Z",
+      "is_superuser": true,
+      "username": "mhamdi",
+      "first_name": "",
+      "last_name": "",
+      "email": "rayenmhamdi94@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-18T19:32:21.712Z",
+      "groups": [],
+      "user_permissions": []
+    },
+    "_comment" : "the password is mynameis007"
+  },
+  {
+    "model": "access.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "role": "Manager",
+      "theme": "Light"
+    }
+  },
+  {
+
+    "model": "access.licence",
+    "pk": 1,
+    "fields": {
+      "encryption_key": "b'9qAQdr6T2vSkrx0SiInSCgq0L3HNvJBnEDPhHfQniqI='",
+      "basic_key": "b'gAAAAABf3nQWbLuNCxcZMkra9UkhBPrW2DGtMUvqWYEk9ccXm_5RlBYulxlx0NgiyDKk1TJ4xpoKj5akO9j4F49_SjOd5_VTDA=='",
+      "custmng": "b'gAAAAABf3nQWTZ9CWbWSbV8kZO6wWFI0AUc43H-tmFB1PU5EJ3c_FP8JKrjXyHgTbD_oWhFQfyLUN4rweswYKCTmmeLT-33kJg=='",
+      "prvdmng": "b'gAAAAABf3nQWaPwFVHr2kiG4vqJRDJ3-fusFuEwQW_27A1iBcjCKrXq9aF1h7cheIYt6dbm7nU8m4_VZ5dDaOJhejrxVW7BcUA=='",
+      "prodmng": "b'gAAAAABf3nQWXbfEq6p9XHOsah40RqE01s88KnI9z2I_Z2BybbPJqANayi-h9Nb7zMM-tMN26xs3ETy9xyx3J2MSlUaZm9oXow=='",
+      "mantmng": "b'gAAAAABf3nQWiHrvqoKhMFjETPD8KLbmduHpPTZQTEUV_0z1ZHL6yDsMVHMnaM0QmQDX91rMBhYfvcnNl0Rrl8VtQBt2uuZ9hQ=='",
+      "mulstor": "b'gAAAAABf3nQW6L0fJk7age9I_mGPqaJMOWeAB4UK3eW6vnAtAuaqFU0vMTEQ40eEcA5qnM7avzVvcTZomx4gfzcxAAjXA_sThg=='",
+      "muluser": "b'gAAAAABf3nQW7STt19xNklx9ibOeHkXwOM53k4eOtPqk4hJSgBYsXi2jL5c1t0YaAnAD-Gw7ODs88MCvBj_FmzEo1Ud3wFdS6w=='",
+      "statrpt": "b'gAAAAABf3nQWQh-Nmqxre9J4TlLZLWh7QirEZw-2mGZ3aQpzOpP-nUNT4hvZPjua60bemzfYeLLchCdY3aq5wbu9PBCfwoEGIQ=='"
+    },
+    "_comment" : "the basic key decrypted is 1867b07284f6 which is Rayen Laptop mac adress, the licence can be ganrted using the generate_full_licence function in access.encryption"
+  }
+]
