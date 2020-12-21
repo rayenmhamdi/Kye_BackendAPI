@@ -13,7 +13,6 @@ class KyeObtainPairSerializer(EmailTokenObtainSerializer):
         token = super().get_token(user)
 
         # Add custom claims
-        token['username'] = user.username
         token['firstname'] = user.first_name
         token['lastname'] = user.last_name
         token['role'] = user.profile.role

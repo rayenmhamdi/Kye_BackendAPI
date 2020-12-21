@@ -1,0 +1,54 @@
+[
+  {
+    "model": "access.kyeuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$nII2qrvaE34V$qPunTqK33PX2/bp7+IWRrMchB4I1iL2Uj6TFU5hPKFE=",
+      "last_login": "2020-12-21T00:52:24.895Z",
+      "is_superuser": true,
+      "first_name": "Safa",
+      "last_name": "Raboudi",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-21T00:51:26.189Z",
+      "email": "raboudi25.safa@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    },
+    "_comment" : "the password is mynameis007"
+  },
+  {
+    "model": "access.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "role": "Manager",
+      "theme": "Light"
+    }
+  },
+  {
+    "model": "access.store",
+    "pk": 1,
+    "fields": {
+      "name": "Kye Inventory",
+      "address": "Habib Bourguiba Haoaria",
+      "code": "800000"
+    }
+  },
+  {
+    "model": "access.licence",
+    "pk": 1,
+    "fields": {
+      "encryption_key": "b'hu_E64TO99HtSOoDH5jn6YSXPU2XPSyyFowd8rLhk1I='",
+      "basic_key": "b'gAAAAABf387I2Rb_ENTpisj--CQlyvRFAyqh_n0CN6G_3GmxXbhrlWgg-3hYeCdyBa7xy8erPixBJlxm6Svpx-BarJFA0sceeg=='",
+      "custmng": "b'gAAAAABf387IJlzkSvZbN7NDVNA-RsMUOYUwneSifQWopETUvWyXGIJR5ixYpubnQbIMhykkgrNcEeMcZEZpx-uOHt-iAj3zPg=='",
+      "prvdmng": "b'gAAAAABf387IlWwkEBTCfG1s1u2ITj5wYSDspOmNr5R6CP0Y1iV1B4bcx2SoLgKlTaYMKYvbUzF9gWmYu_DHktiLX4L036ERVA=='",
+      "prodmng": "b'gAAAAABf387IPcqXPuKO-ewxn9PRMpBHteGirZoh4JaUMfXGT36IIgok3vZ0eDP4JhBQNcVRGYCban1iZS4SEY7DDSR-g260dA=='",
+      "mantmng": "b'gAAAAABf387Ie2S5rsg4VvDJNm8NFEvzD_OyhKLCgLkY9dupbMXCd3hmvSW1MD4F3ptwj9X90OWLATtRQwZOsqbibEkvQfstKg=='",
+      "mulstor": "b'gAAAAABf387IRp6SMZTx8sL1OGFbXzMVYJBmtJ4IKChr-nBSaP3Twsy499C1qLauPkWHfwN7JuW0L6jY5TWFsCx_qss8CfF1Ng=='",
+      "muluser": "b'gAAAAABf387IJiBp8cJiFbitBrgHD2U3uG2yOwVFil2i1DmvC7vUtajs-HcKyuSH04kkCnn2ZZVySSVQZGmVGnfBOyhFkF1baQ=='",
+      "statrpt": "b'gAAAAABf387IdPaqQdQbmmzBdHXsZG4LqXlaIXRzxvvONVmXUZsCneHIDK4TjiOcjLfXfumfhTSnskE4DbJweU3eCrWe89dlCg=='"
+    },
+    "_comment": "the basic key decrypted is 34e6adcc085c which is Safa Laptop mac adress, the licence can be ganrted using the generate_full_licence function in access.encryption"
+  }
+]
