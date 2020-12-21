@@ -1,10 +1,26 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.utils.translation import gettext_lazy as _
 
-# Create your models here.
+from access.customusermanager import CustomUserManager
 from access.encryption import decrypt, get_module_validity, get_mac, encrypt, string_to_bytes, empty_licence
+# Create your models here.
 
-ENCRYPTION_KEY_KEY = "KyeInventorySys_"
+
+
+class KyeUser(AbstractUser):
+    username = None
+    email = models.EmailField(_('email address'), unique=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email
+
 
 # The User and the profile (1 Manager) Classes need to be fed with an initial Fixture
 class Profile(models.Model):
@@ -17,7 +33,7 @@ class Profile(models.Model):
         ('Cosmic', 'Cosmic'),
         ('Dark', 'Dark'),
     )
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    user = models.OneToOneField(KyeUser, on_delete=models.CASCADE, related_name="profile")
     role = models.CharField(choices=ROLE_CHOICES, max_length=10, null=True, blank=True)
     theme = models.CharField(choices=THEME_CHOICES, max_length=10, null=True, blank=True)
 
@@ -80,7 +96,6 @@ class Licence(models.Model):
                 licence["muluser"] = get_module_validity("muluser", decrypt(string_to_bytes(self.muluser), key))
                 licence["statrpt"] = get_module_validity("statrpt", decrypt(string_to_bytes(self.statrpt), key))
             return licence
-
 
 
 

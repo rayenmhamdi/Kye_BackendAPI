@@ -1,18 +1,17 @@
 [
   {
-    "model": "auth.user",
+    "model": "access.kyeuser",
     "pk": 1,
     "fields": {
-      "password": "pbkdf2_sha256$216000$rmplem9LM4Gi$bbMEvQygKE/N8P/uDL7rZXIAT2oN+t+pqjHCUl5NYnI=",
-      "last_login": "2020-12-19T21:55:59.613Z",
+      "password": "pbkdf2_sha256$216000$nII2qrvaE34V$qPunTqK33PX2/bp7+IWRrMchB4I1iL2Uj6TFU5hPKFE=",
+      "last_login": "2020-12-21T00:52:24.895Z",
       "is_superuser": true,
-      "username": "mhamdi",
       "first_name": "",
       "last_name": "",
-      "email": "rayenmhamdi94@gmail.com",
       "is_staff": true,
       "is_active": true,
-      "date_joined": "2020-12-18T19:32:21.712Z",
+      "date_joined": "2020-12-21T00:51:26.189Z",
+      "email": "rayenmhamdi94@gmail.com",
       "groups": [],
       "user_permissions": []
     },
@@ -28,7 +27,15 @@
     }
   },
   {
-
+    "model": "access.store",
+    "pk": 1,
+    "fields": {
+      "name": "Kye Inventory",
+      "address": "Habib Bourguiba Haoaria",
+      "code": "800000"
+    }
+  },
+  {
     "model": "access.licence",
     "pk": 1,
     "fields": {
