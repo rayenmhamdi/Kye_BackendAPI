@@ -25,7 +25,7 @@ SECRET_KEY = ')w#&6uh9hf&94j2g@-&4a6g^)(a4a_d@8y7*2t=rvq#ldwx2r*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'Kye_BackendAPI.urls'
 
 TEMPLATES = [

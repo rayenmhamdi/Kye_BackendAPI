@@ -29,9 +29,10 @@ class Profile(models.Model):
         ('Vendor', 'Vendor'),
     )
     THEME_CHOICES = (
-        ('Light', 'Light'),
-        ('Cosmic', 'Cosmic'),
-        ('Dark', 'Dark'),
+        ('default', 'Light'),
+        ('cosmic', 'Cosmic'),
+        ('dark', 'Dark'),
+        ('corporate', 'Corporate'),
     )
     user = models.OneToOneField(KyeUser, on_delete=models.CASCADE, related_name="profile")
     role = models.CharField(choices=ROLE_CHOICES, max_length=10, null=True, blank=True)
