@@ -14,3 +14,6 @@ This repository is the backend of the Inventory Management product "Kye". Develo
 ## Adding packages
 If you add any package during the dev phase
 type (pip freeze > requirements.txt)
+
+## Third Parties
+to use the django browsable API you need to install ModHeader extension for your browser. and set the authorization request header to bearer (example: Authorization : Bearer <jwt>)

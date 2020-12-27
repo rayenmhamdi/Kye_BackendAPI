@@ -36,10 +36,9 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('access/', include('access.urls')),
+    path('crm/', include('crm.urls')),
     path('admin/', admin.site.urls),
 
     # Documentation paths
-    url(r'^apidoc(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     url(r'^apidoc/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    url(r'^apiredoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

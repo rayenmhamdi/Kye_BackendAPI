@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'drf_yasg',
 
     # My_Apps
-    'access.apps.AccessConfig'
+    'access.apps.AccessConfig',
+    'crm.apps.CrmConfig'
 ]
 
 MIDDLEWARE = [
@@ -113,7 +114,10 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
 }
 
 SIMPLE_JWT = {
