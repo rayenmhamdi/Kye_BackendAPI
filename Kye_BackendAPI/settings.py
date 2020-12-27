@@ -46,7 +46,8 @@ INSTALLED_APPS = [
 
     # My_Apps
     'access.apps.AccessConfig',
-    'crm.apps.CrmConfig'
+    'crm.apps.CrmConfig',
+    'article.apps.ArticleConfig'
 ]
 
 MIDDLEWARE = [
