@@ -9,7 +9,8 @@ This repository is the backend of the Inventory Management product "Kye". Develo
 5. Install packages (pip install -r requirements.txt)
 6. Create the database (python manage.py migrate)
 7. Import initial fixture (python manage.py loaddata Fixtures\rayen.json)
-8. Run the server and open the documentation to see the apis (http://localhost:8000/apidoc/)
+8. Seed the database with Data (python manage.py seed)
+9. Run the server and open the documentation to see the apis (http://localhost:8000/apidoc/)
 
 ## Adding packages
 If you add any package during the dev phase

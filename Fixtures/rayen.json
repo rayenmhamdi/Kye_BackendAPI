@@ -18,12 +18,39 @@
     "_comment" : "the password is mynameis007"
   },
   {
+    "model": "access.kyeuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$nII2qrvaE34V$qPunTqK33PX2/bp7+IWRrMchB4I1iL2Uj6TFU5hPKFE=",
+      "last_login": "2020-12-21T00:52:24.895Z",
+      "is_superuser": true,
+      "first_name": "Safa",
+      "last_name": "Raboudi",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-21T00:51:26.189Z",
+      "email": "raboudi25.safa@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    },
+    "_comment" : "the password is mynameis007"
+  },
+  {
     "model": "access.profile",
     "pk": 1,
     "fields": {
       "user": 1,
       "role": "Manager",
-      "theme": "Light"
+      "theme": "default"
+    }
+  },
+  {
+    "model": "access.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "role": "Vendor",
+      "theme": "cosmic"
     }
   },
   {
