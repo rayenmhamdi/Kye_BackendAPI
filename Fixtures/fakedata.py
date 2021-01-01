@@ -64,6 +64,6 @@ def generate_data():
     print('20 Category generated')
 
     #Generate Products
-    create_products(5000)
-    print('5000 Product generated')
+    create_products(500)
+    print('500 Product generated')
 
