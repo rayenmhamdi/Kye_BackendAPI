@@ -43,7 +43,7 @@ class Product(models.Model):
         ('inactive', 'Inactive'),
         ('active', 'Active'),
     )
-    status = models.CharField(choices=STATUS_CHOICES, max_length=50, null=False, blank=False)
+    status = models.CharField(choices=STATUS_CHOICES, max_length=50, null=False, blank=False, default='active')
     details = models.TextField(max_length=1000, null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
