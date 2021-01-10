@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 
-from rest_framework import generics
+from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -27,6 +27,14 @@ class CategoryDetailsView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+    def destroy(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.products.count() > 0:
+            return Response(data={'message': "CAT_01"},
+                            status=status.HTTP_400_BAD_REQUEST)
+        self.perform_destroy(obj)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 
