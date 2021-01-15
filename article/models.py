@@ -48,6 +48,9 @@ class Product(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
+    @property
+    def category_name(self):
+        return self.category.name
 
 
 class ProductHistory(models.Model):

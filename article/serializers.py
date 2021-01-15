@@ -18,10 +18,11 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    category_name = serializers.CharField(read_only=True)
     class Meta:
         model = Product
         fields = '__all__'
-
+        read_only_fields = ('category_name',)
 
 """
 class GetLanguageSerializer(serializers.ModelSerializer):
